@@ -9,7 +9,7 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>[Your Self Introduction]</p>
+        <p>Hi! This is my website for my recipes. Eventually I will add more cool things :D</p>
         
       </section>
     </Layout>
