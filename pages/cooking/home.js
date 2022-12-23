@@ -6,6 +6,11 @@ import { Card3 } from '../../components/card3';
 export default function CookingHome() {
   return (
     <Grid.Container gap={2} justify="center">
+      <Grid sm={12}>
+        <h1>
+          Our Recipes
+        </h1>
+      </Grid>
       <Grid xs={12} sm={4}>
         <RecipeCard />
       </Grid>
