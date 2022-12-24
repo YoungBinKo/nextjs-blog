@@ -27,7 +27,7 @@ export const RecipeCard = () => (
         </Card.Header>
         <Card.Body css={{ p: 0 }}>
           <Card.Image
-            src="/images/cooking/IMG_1359.jpeg"
+            src="/images/meal_1.jpeg"
             width="100%"
             height="100%"
             objectFit="cover"

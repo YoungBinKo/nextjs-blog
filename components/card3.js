@@ -27,11 +27,11 @@ export const Card3 = () => (
         </Card.Header>
         <Card.Body css={{ p: 0 }}>
           <Card.Image
-            src="/images/cooking/IMG_1508.jpeg"
+            src="/images/meal_3.jpeg"
             width="100%"
             height="100%"
             objectFit="cover"
-            alt="meal1"
+            alt="meal3"
           />
         </Card.Body>
         <Card.Footer
