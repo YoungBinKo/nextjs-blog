@@ -13,7 +13,7 @@ export const Card2 = () => (
       duration: .2
     }
   }}>
-    <Link href="/cooking/meal2">
+    {/* <Link href="/cooking/meal2"> */}
       <Card css={{ w: "100%", h: "100%" }}>
         <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
           <Col>
@@ -50,9 +50,23 @@ export const Card2 = () => (
                 Prep time: 1h
               </Text>
             </Col>
+            <Col>
+              <Row justify="flex-end">
+                <Button flat auto rounded color="secondary">
+                  <Text
+                    css={{ color: "inherit" }}
+                    size={12}
+                    weight="bold"
+                    transform="uppercase"
+                  >
+                    Coming soon
+                  </Text>
+                </Button>
+              </Row>
+            </Col>
           </Row>
         </Card.Footer>
       </Card>
-    </Link>
+    {/* </Link> */}
   </motion.li>
 );
