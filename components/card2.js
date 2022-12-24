@@ -10,7 +10,7 @@ export const Card2 = () => (
     background: 'transparent',
     scale: 1.03  ,
     transition: {
-      duration: .2
+      duration: .5
     }
   }}>
     {/* <Link href="/cooking/meal2"> */}
