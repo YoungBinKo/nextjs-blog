@@ -4,11 +4,11 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export const RecipeCard = () => (
-  <motion.li className="card" whileHover={{
+  <motion.div className="card" whileHover={{
     position: 'relative',
     zIndex: 1,
     background: 'transparent',
-    scale: 1.03  ,
+    scale: 1.03,
     transition: {
       duration: .2
     }
@@ -68,5 +68,5 @@ export const RecipeCard = () => (
         </Card.Footer>
       </Card>
     {/* </Link> */}
-  </motion.li>
+  </motion.div>
 );

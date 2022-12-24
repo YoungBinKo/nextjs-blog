@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export const Card2 = () => (
-  <motion.li className="card" whileHover={{
+  <motion.div className="card" whileHover={{
     position: 'relative',
     zIndex: 1,
     background: 'transparent',
@@ -68,5 +68,5 @@ export const Card2 = () => (
         </Card.Footer>
       </Card>
     {/* </Link> */}
-  </motion.li>
+  </motion.div>
 );
