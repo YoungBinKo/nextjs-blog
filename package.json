@@ -14,7 +14,8 @@
     "keen-slider": "^6.8.5",
     "next": "latest",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
     "@types/react": "18.0.26",
