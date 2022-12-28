@@ -25,7 +25,7 @@ export default function Meal1() {
           <RecipeStepCard
             stepNumber={1}
             title={"Wash rice"}
-            imgSrc={"/images/cooking/IMG_1306.jpeg"}
+            imgSrc={"/images/cooking/tofu-rice/rice-1.jpg"}
             imgAlt={"Washing rice"}
             text={"First wash the rice under cold water, draining it several times until the water is clear."} 
           />
