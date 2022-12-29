@@ -1,52 +1,32 @@
+import { styled } from "@nextui-org/react";
 import RecipeStepCard from "./recipe-step-card"
-import SliderSt from "../styles/SliderStyles.module.css"
 
-function SliderOfCards() {
+function SliderOfCards(props) {
+  const recipeSteps = props.recipeSteps
+
+  const CardGroup = styled("div", {
+    overflowX: "auto",
+    display: "grid",
+    gridTemplateColumns: "repeat(" + recipeSteps.length +",1fr)",
+    columnGap: "0.6rem",
+    rowGap: "0.6rem",
+    scrollSnapType: "x mandatory"
+  })
+
+  const recipeStepCards = recipeSteps.map((step, index) =>
+    <RecipeStepCard
+      stepNumber={index+1}
+      title={step.title}
+      imgSrc={step.imgSrc}
+      imgAlt={step.alt}
+      text={step.text} 
+    />
+  )
+
   return (
-    <div className={SliderSt.CardsGroup}>
-        <RecipeStepCard
-            stepNumber={1}
-            title={"Wash rice"}
-            imgSrc={"/images/cooking/tofu-rice/rice-1.jpg"}
-            imgAlt={"Washing rice"}
-            text={"First wash the rice under cold water, draining it several times until the water is clear."} 
-        />
-        <RecipeStepCard
-            stepNumber={2}
-            title={"Wash rice"}
-            imgSrc={"/images/cooking/tofu-rice/rice-1.jpg"}
-            imgAlt={"Washing rice"}
-            text={"First wash the rice under cold water, draining it several times until the water is clear."} 
-        />
-        <RecipeStepCard
-            stepNumber={3}
-            title={"Wash rice"}
-            imgSrc={"/images/cooking/tofu-rice/rice-1.jpg"}
-            imgAlt={"Washing rice"}
-            text={"First wash the rice under cold water, draining it several times until the water is clear."} 
-        />
-        <RecipeStepCard
-            stepNumber={3}
-            title={"Wash rice"}
-            imgSrc={"/images/cooking/tofu-rice/rice-1.jpg"}
-            imgAlt={"Washing rice"}
-            text={"First wash the rice under cold water, draining it several times until the water is clear."} 
-        />
-        <RecipeStepCard
-            stepNumber={3}
-            title={"Wash rice"}
-            imgSrc={"/images/cooking/tofu-rice/rice-1.jpg"}
-            imgAlt={"Washing rice"}
-            text={"First wash the rice under cold water, draining it several times until the water is clear."} 
-        />
-        <RecipeStepCard
-            stepNumber={3}
-            title={"Wash rice"}
-            imgSrc={"/images/cooking/tofu-rice/rice-1.jpg"}
-            imgAlt={"Washing rice"}
-            text={"First wash the rice under cold water, draining it several times until the water is clear."} 
-        />
-    </div>
+    <CardGroup>
+        {recipeStepCards}
+    </CardGroup>
   )
 }
 
