@@ -2,18 +2,12 @@ import { Card, Col, Row, Button, Text } from "@nextui-org/react";
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import SliderSt from '../styles/SliderStyles.module.css'
 
-export const RecipeStepCard = (props) => (
-  <motion.div className="card" whileHover={{
-    position: 'relative',
-    zIndex: 1,
-    background: 'transparent',
-    scale: 1.03  ,
-    transition: {
-      duration: .2
-    }
-  }}>
-    <Card css={{ w: "100%", h: "100%" }}>
+export default function RecipeStepCard(props) {
+
+  return (
+    <Card className={SliderSt.recipeCard}>
       <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
         <Col>
           <Text size={12} weight="bold" transform="uppercase" color="black">
@@ -53,5 +47,5 @@ export const RecipeStepCard = (props) => (
         </Row>
       </Card.Footer>
     </Card>
-  </motion.div>
-);
+  )
+}

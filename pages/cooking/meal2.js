@@ -1,6 +1,8 @@
 import { Grid, Text, useTheme } from "@nextui-org/react"
 import styled from "styled-components"
 import { RecipeStepCard } from "../../components/recipe-step-card"
+import CardSlider from "../../components/CardSlider"
+import SliderOfCards from "../../components/SliderOfCards"
 
 export default function Meal2() {
 
@@ -22,13 +24,7 @@ export default function Meal2() {
           </IngredientsSection>
         </Grid>
         <Grid xs={12}>
-          <RecipeStepCard
-            stepNumber={1}
-            title={"Wash rice"}
-            imgSrc={"/images/cooking/IMG_1306.jpeg"}
-            imgAlt={"Washing rice"}
-            text={"First wash the rice under cold water, draining it several times until the water is clear."} 
-          />
+          <SliderOfCards />
         </Grid>
       </Grid.Container>
     </>
