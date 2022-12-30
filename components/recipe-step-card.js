@@ -8,7 +8,13 @@ export default function RecipeStepCard(props) {
 
   return (
     <Card className={SliderSt.recipeCard}>
-      <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
+      <Card.Header 
+        css={{ 
+          position: "absolute", 
+          zIndex: 1, 
+          top: 0,
+          bgBlur: "#ffffff66",          
+           }}>
         <Col>
           <Text size={12} weight="bold" transform="uppercase" color="black">
             {props.stepNumber}
@@ -24,7 +30,7 @@ export default function RecipeStepCard(props) {
           width="100%"
           height="400px"
           objectFit="cover"
-          alt={props.imgAlt}
+          alt={props.title}
         />
       </Card.Body>
       <Card.Footer
@@ -39,7 +45,7 @@ export default function RecipeStepCard(props) {
       >
         <Row>
           <Col>
-            <Text color="#000" size={13}>
+            <Text color="#000" size={15}>
               {props.text}
             </Text>
           </Col>

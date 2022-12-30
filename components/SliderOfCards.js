@@ -1,4 +1,4 @@
-import { styled } from "@nextui-org/react";
+import { Grid, styled } from "@nextui-org/react";
 import RecipeStepCard from "./recipe-step-card"
 
 function SliderOfCards(props) {
@@ -24,9 +24,16 @@ function SliderOfCards(props) {
   )
 
   return (
-    <CardGroup>
-        {recipeStepCards}
-    </CardGroup>
+    <Grid.Container>
+      <Grid xs={12} css={{ paddingBottom: 0 }}>
+          <h4>Steps</h4>
+      </Grid> 
+      <Grid xs={12}>
+        <CardGroup>
+            {recipeStepCards}
+        </CardGroup>
+      </Grid>
+    </Grid.Container>
   )
 }
 
