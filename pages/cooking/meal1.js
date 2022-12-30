@@ -1,8 +1,10 @@
-import { Grid, Text, useTheme } from "@nextui-org/react"
-import styled from "styled-components"
+import { Grid, Text, useTheme, styled } from "@nextui-org/react"
 import SliderOfCards from "../../components/SliderOfCards"
+import IngredientsTable from "../../components/IngredientsTable"
 
 export default function Meal1() {
+  const { theme } = useTheme()
+
   const recipeSteps = [
     {
       title:"acc",
@@ -22,9 +24,38 @@ export default function Meal1() {
       alt:"1234",
       text:"123344556"
     }
-
   ]
-  const { theme } = useTheme();
+
+  const ingredients = [
+    {
+      key: "1",
+      name: "Ginger",
+      quantity: "1 tbsp",
+      note: "Minced",
+    },
+    {
+      key: "2",
+      name: "Soy sauce",
+      quantity: "2 tbsp",
+      note: "",
+    },
+    {
+      key: "3",
+      name: "Dark soy sauce",
+      quantity: "1 tbsp",
+      note: "(Optional) for color",
+    },
+    {
+      key: "4",
+      name: "Tofu",
+      quantity: "250g",
+      note: "Tofu should be firm, crumble easily. E.g. the store-brand tofu from Kaufland or Rewe",
+    },
+  ]
+
+  const Title = styled('h1', {
+    textAlign: "center",
+  })
 
   return (
     <>
@@ -33,13 +64,7 @@ export default function Meal1() {
           <Title>Tofu over Rice</Title>
         </Grid>
         <Grid xs={12}>
-          <IngredientsSection>
-            <Ingredient>
-              <Name>Ginger</Name>
-              <Quantity>1 tbsp</Quantity>
-              <Note>Minced</Note>
-            </Ingredient>
-          </IngredientsSection>
+          <IngredientsTable ingredients={ingredients} />
         </Grid>
         <Grid xs={12}>
           <SliderOfCards recipeSteps={recipeSteps} />
@@ -48,41 +73,3 @@ export default function Meal1() {
     </>
   )
 }
-
-const Title = styled.h1`
-  text-align: center;
-`
-
-const IngredientsSection = styled.section`
-  display: flex;
-  flex-flow: column nowrap;
-`
-
-const Ingredient = styled.div`
-  display: flex;
-  flex-flow: row nowrap;
-`
-
-const Name = styled.span`
-  margin-right: 2em;
-`
-
-const Quantity = styled.span`
-  margin-right: 4em;
-`
-
-const Note = styled.span`
-
-`
-
-const StepsSection = styled.section`
-  display: flex;
-  flex-flow: column nowrap;
-`
-
-const Step = styled.div`
-  display: flex:
-  flex-flow: row nowrap;
-`
-
-const Information = styled.p``
