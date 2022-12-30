@@ -2,6 +2,8 @@ import { Grid, Link, Button } from "@nextui-org/react";
 import { RecipeCard } from '../../components/card';
 import { Card2 } from '../../components/card2';
 import { Card3 } from '../../components/card3';
+import { Card4 } from "../../components/Card4";
+import { Card5 } from "../../components/Card5";
 
 export default function CookingHome() {
   const HeartIcon = ({
@@ -68,7 +70,12 @@ export default function CookingHome() {
       <Grid xs={12} sm={4}>
         <Card3 />
       </Grid>
-      
+      <Grid xs={12} sm={4}>
+        <Card4 />
+      </Grid>
+      <Grid xs={12} sm={4}>
+        <Card5 />
+      </Grid>
     </Grid.Container>
   );
 }
