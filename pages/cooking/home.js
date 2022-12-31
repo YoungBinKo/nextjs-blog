@@ -68,7 +68,9 @@ export default function CookingHome() {
         </Link>
       </Grid>
       <Grid xs={12} sm={4}>
-        <Card3 />
+        <Link href="/cooking/meal3">  
+          <Card3 />
+        </Link>
       </Grid>
       <Grid xs={12} sm={4}>
         <Card4 />
