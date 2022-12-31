@@ -1,7 +1,4 @@
 import { Card, Col, Row, Button, Text } from "@nextui-org/react";
-import Image from 'next/image';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
 import SliderSt from '../styles/SliderStyles.module.css'
 
 export default function RecipeStepCard(props) {
@@ -19,7 +16,7 @@ export default function RecipeStepCard(props) {
           <Text size={12} weight="bold" transform="uppercase" color="black">
             {props.stepNumber}
           </Text>
-          <Text h3 color="black">
+          <Text h4 color="black">
             {props.title}
           </Text>
         </Col>
@@ -45,7 +42,7 @@ export default function RecipeStepCard(props) {
       >
         <Row>
           <Col>
-            <Text color="#000" size={15}>
+            <Text color="#000" size={16}>
               {props.text}
             </Text>
           </Col>
