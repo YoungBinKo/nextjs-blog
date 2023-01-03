@@ -4,6 +4,7 @@ import { Card2 } from '../../components/card2';
 import { Card3 } from '../../components/card3';
 import { Card4 } from "../../components/Card4";
 import { Card5 } from "../../components/Card5";
+import { Card6 } from "../../components/Card6";
 
 export default function CookingHome() {
   const HeartIcon = ({
@@ -47,7 +48,7 @@ export default function CookingHome() {
           <br />
           I want to share some of our favorite meals so that you can also enjoy them.
           <br />
-          If you are enjoying our recipe project, feel free to contribute to our challenge on ShareTheMeal to prove the meals around the world for those in need.
+          If you are enjoying our recipe project, feel free to contribute to our challenge on <Link color="error" href="https://sharethemeal.org/en/values.html">ShareTheMeal</Link> to prove the meals around the world for those in need.
         </h3>
       </Grid>
       <Grid xs={12}>
@@ -77,6 +78,9 @@ export default function CookingHome() {
       </Grid>
       <Grid xs={12} sm={4}>
         <Card5 />
+      </Grid>
+      <Grid xs={12} sm={4}>
+        <Card6 />
       </Grid>
     </Grid.Container>
   );
